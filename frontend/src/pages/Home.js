@@ -3,6 +3,7 @@ import { Image } from 'cloudinary-react';
 
 export default function Home() {
     const [imageIds, setImageIds] = useState();
+
     const loadImages = async () => {
         try {
             const res = await fetch('/api/images');
@@ -12,9 +13,11 @@ export default function Home() {
             console.error(err);
         }
     };
+
     useEffect(() => {
         loadImages();
     }, []);
+
     return (
         <div>
             <h1 className="title">Cloudinary Gallery</h1>

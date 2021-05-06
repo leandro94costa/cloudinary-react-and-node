@@ -7,6 +7,7 @@ export default function Upload() {
     const [selectedFile, setSelectedFile] = useState();
     const [successMsg, setSuccessMsg] = useState('');
     const [errMsg, setErrMsg] = useState('');
+    
     const handleFileInputChange = (e) => {
         const file = e.target.files[0];
         previewFile(file);
@@ -51,6 +52,7 @@ export default function Upload() {
             setErrMsg('Something went wrong!');
         }
     };
+
     return (
         <div>
             <h1 className="title">Upload an Image</h1>
