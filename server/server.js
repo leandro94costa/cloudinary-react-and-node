@@ -16,7 +16,6 @@ app.get('/api/images', async (req, res) => {
         .execute();
 
     const publicIds = resources.map((file) => file.public_id);
-    console.log(publicIds);
     res.send(publicIds);
 });
 
